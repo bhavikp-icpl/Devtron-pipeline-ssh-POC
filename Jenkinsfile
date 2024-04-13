@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     sshagent(credentials: ['devopslab-cred']) {
-                        sh 'ssh -o StrictHostKeyChecking=no devopslab@172.17.14.121 "cd /home/devopslab/Devtron-pipeline-ssh-POC && python3 hello-world.py"'
+                        sh 'ssh -o StrictHostKeyChecking=no devopslab@172.17.14.121 "cd /home/devopslab/Devtron-pipeline-ssh-POC/code && python3 hello-world.py"'
                     }
                 }
             }
